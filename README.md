@@ -68,13 +68,12 @@ Or you can access the web application directly via this []()
 
 *****
 
-## Technologies Used
+## APIs Used
 
-1. HTML
-
-2. CSS
-
-3. JavaScript
+1. [poetry db](https://poetrydb.org/index.html)
+    - `https://poetrydb.org/random/1` get one random poem
+      - `"title", "author","lines","lineocount"`
+    - 
 
 *****
 
