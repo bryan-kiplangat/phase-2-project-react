@@ -8,13 +8,11 @@
 
 ## Project Description
 
-Phase 2 Project: React Project week
+Phase 2 Project: A react project pulling data from an API to manipulate and render providing information about MMO games and show when game giveaways happen
 
 ******
 
-## SCREENSHOTS
 
-********
 
 ## SetUp Instruction
 
@@ -52,30 +50,19 @@ Phase 2 Project: React Project week
 
 ## Live Link
 
-Or you can access the web application directly via this []()
+Or you can access the web application directly via this [https://phase-2-project-react.vercel.app/](https://phase-2-project-react.vercel.app/)
 
-*****
-
-## Dependencies
-
-- Google fonts
-
-- Font awesome Icons
-
-- MD Bootstrap
-
-- Colormind.io
 
 *****
 
 ## APIs Used
 
-1. [poetry db](https://poetrydb.org/index.html)
-    - `https://poetrydb.org/random/1` get one random poem
+1. [poetry db]()
       - `"title", "author","lines","lineocount"`
+      - * turned off due to exceding rate limit
 2. [mmobomb](https://www.mmobomb.com/api) 
 Access programmatically the best MMO games, multiplayer online games, news and giveaways
-3. 
+1. 
 
 *****
 
