@@ -1,5 +1,4 @@
 // Show game categories
-import "./side.css"
 const categories = [
   "mmorpg",
   "shooter",

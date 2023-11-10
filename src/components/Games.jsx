@@ -10,18 +10,14 @@ function Games({ games, giveaways }) {
   return (
     <>
       <div className="flex flex-col items-center mt-8">
-        <div className="army-container w-3/4 p-4 mb-8">
+        <div className="givaway-container w-3/4 p-4 mb-8">
           <h2 className="text-2xl font-bold mb-4">Giveaways</h2>
-          <div className="selected-bots-container flex flex-wrap gap-4">
+          <div className="selected-games-container flex flex-wrap gap-4">
             {giveaways.map((giveaway, index) => (
-              <Link
-                to={`/game/${giveaway.id}`}
-                key={index}
-                className="bot-item"
-              >
+
                 <div
                   key={index}
-                  className="army-bot bg-white p-4 rounded shadow-md"
+                  className="givaway-game bg-white p-4 rounded shadow-md"
                 >
                   <img
                     src={giveaway.thumbnail}
@@ -31,19 +27,18 @@ function Games({ games, giveaways }) {
                   <p className="text-lg font-semibold">{giveaway.title}</p>
                   <a href={giveaway.giveaway_url}>Giveaway steps</a>
                 </div>
-              </Link>
             ))}
           </div>
         </div>
 
-        <div className="bot-list-container w-3/4 p-4 mb-8">
+        <div className="game-list-container w-3/4 p-4 mb-8">
           <h2 className="text-2xl font-bold mb-4">MMO Games List</h2>
-          <div className="selected-bots-container flex flex-wrap gap-4">
+          <div className="selected-games-container flex flex-wrap gap-4">
             {games.map((game, index) => (
-              <Link to={`/game/${game.id}`} key={index} className="bot-item">
+              <Link to={`/game/${game.id}`} key={game.id} className="game-item">
                 <div
                   key={index}
-                  className="bot-item bg-white p-4 rounded shadow-md"
+                  className="game-item bg-white p-4 rounded shadow-md"
                   onClick={() => onCardClick(game)}
                 >
                   <img

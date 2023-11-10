@@ -19,7 +19,7 @@ function App() {
     setQuery(event.target.value);
   };
 
-  // fetch bot data
+  // fetch game data
   useEffect(() => {
     async function fetchGames() {
       try {
@@ -50,7 +50,7 @@ function App() {
         setGiveaways(data2);
         setLoading(false);
       } catch (error) {
-        console.error("There was a problem fetching bots data:", error);
+        console.error("There was a problem fetching games data:", error);
         setLoading(false);
       }
     }
