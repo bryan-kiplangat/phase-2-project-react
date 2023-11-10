@@ -1,5 +1,5 @@
 // Show game categories
-
+import "./side.css"
 const categories = [
   "mmorpg",
   "shooter",
@@ -48,20 +48,27 @@ const categories = [
   "mmorts",
 ];
 
-function getCategory() {
-  
+function onSelectCategory(categ){
+  console.log(categ)
 }
+
 function SideBar() {
   return (
-    <>
-      <div className="categories-list">
-        {categories.map((category, index) => (
-          <div key={index} className="category-item">
-            <p onClick={getCategory()}>{category}</p>
-          </div>
-        ))}
-      </div>
-    </>
+    <aside className="w-1/4 p-4 bg-gray-200 sidebar">
+    <h2 className="text-xl font-bold mb-4">Categories</h2>
+    <ul>
+      {categories.map((category, index) => (
+        <li
+          key={index}
+          className="cursor-pointer hover:underline mb-2"
+          onClick={() => onSelectCategory(category)}
+        >
+          {category}
+        </li>
+      ))}
+    </ul>
+  </aside>
+
   );
 }
 
