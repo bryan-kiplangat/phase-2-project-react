@@ -4,7 +4,8 @@ import NavBar from "./components/Navbar";
 import GameDetails from "./components/GameDetail";
 
 import GameDetail from "./components/GameDetail";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import React from "react";
 
 import { useState, useEffect } from "react";
 
@@ -63,18 +64,21 @@ function App() {
 
         <div className="flex">
           <SideBar />
-          <Switch>
-            <Route exact path="/">
-              <div className="flex-1 p-4">
-                {loading ? (
-                  <div>Loading...</div>
-                ) : (
-                  <Games games={games} giveaways={giveaways} />
-                )}
-              </div>
-            </Route>
-            <Route path="/game/:id" component={GameDetails} />
-          </Switch>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="flex-1 p-4">
+                  {loading ? (
+                    <>Loading...</>
+                  ) : (
+                    <Games games={games} giveaways={giveaways} />
+                  )}
+                </div>
+              }
+            />
+            <Route path="/game/:id" element={<GameDetails />} />
+          </Routes>
         </div>
         <GameDetail />
       </div>
